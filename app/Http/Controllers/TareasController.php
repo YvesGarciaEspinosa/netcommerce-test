@@ -19,7 +19,7 @@ class TareasController extends Controller
         ->get();
 
         foreach($tareas as $tarea){
-            if($tareas->usuario == null){
+            if(!isset($tareas->usuario)){
                 $tareas->usuario = "Sin usuario asignado";
             }
         }
